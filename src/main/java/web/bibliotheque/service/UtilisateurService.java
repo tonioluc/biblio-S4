@@ -5,13 +5,15 @@ import org.springframework.stereotype.Service;
 import web.bibliotheque.model.Utilisateur;
 import web.bibliotheque.repository.UtilisateurRepository;
 
+import java.util.Optional;
+
 @Service
 public class UtilisateurService {
 
     @Autowired
     private UtilisateurRepository utilisateurRepository;
 
-    public Utilisateur verifierConnexion(String email, String motDePasse) {
+    public Optional<Utilisateur> verifierConnexion(String email, String motDePasse) {
         return utilisateurRepository.findByEmailAndMotDePasse(email, motDePasse);
     }
 }

@@ -8,11 +8,18 @@ import org.springframework.ui.Model;
 import web.bibliotheque.model.Utilisateur;
 import web.bibliotheque.service.UtilisateurService;
 
+import java.util.Optional;
+
 @Controller
 public class AuthController {
 
     @Autowired
     private UtilisateurService utilisateurService;
+
+    @GetMapping("/")
+    public String init() {
+        return "login";
+    }
 
     @GetMapping("/login")
     public String afficherLogin() {
@@ -24,9 +31,11 @@ public class AuthController {
                                 @RequestParam String motDePasse,
                                 HttpSession session,
                                 Model model) {
-        Utilisateur utilisateur = utilisateurService.verifierConnexion(email, motDePasse);
 
-        if (utilisateur != null) {
+        Optional<Utilisateur> utilisateurOpt = utilisateurService.verifierConnexion(email, motDePasse);
+
+        if (utilisateurOpt.isPresent()) {
+            Utilisateur utilisateur = utilisateurOpt.get();
             session.setAttribute("utilisateurId", utilisateur.getId());
             session.setAttribute("role", utilisateur.getRole());
             return "redirect:/accueil";
