@@ -3,33 +3,74 @@ package web.bibliotheque.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "utilisateur")
 public class Utilisateur {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer idUtilisateur;
 
+    @Column(unique = true, nullable = false)
     private String email;
 
+    @Column(nullable = false)
     private String motDePasse;
 
+    @Column(nullable = false)
     private String role; // 'adherent' ou 'bibliothecaire'
 
-    // Getters et Setters
-    public Long getId() { return id; }
+    @OneToOne
+    @JoinColumn(name = "idAdherent", referencedColumnName = "idAdherent")
+    private Adherent adherent;
 
-    public void setId(Long id) { this.id = id; }
+    @OneToOne
+    @JoinColumn(name = "idBibliothecaire", referencedColumnName = "idBibliothecaire")
+    private Bibliothecaire bibliothecaire;
 
-    public String getEmail() { return email; }
+    public Integer getId() {
+        return idUtilisateur;
+    }
 
-    public void setEmail(String email) { this.email = email; }
+    public void setId(Integer idUtilisateur) {
+        this.idUtilisateur = idUtilisateur;
+    }
 
-    public String getMotDePasse() { return motDePasse; }
+    public String getEmail() {
+        return email;
+    }
 
-    public void setMotDePasse(String motDePasse) { this.motDePasse = motDePasse; }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-    public String getRole() { return role; }
+    public String getMotDePasse() {
+        return motDePasse;
+    }
 
-    public void setRole(String role) { this.role = role; }
+    public void setMotDePasse(String motDePasse) {
+        this.motDePasse = motDePasse;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+    public Adherent getAdherent() {
+        return adherent;
+    }
+
+    public void setAdherent(Adherent adherent) {
+        this.adherent = adherent;
+    }
+
+    public Bibliothecaire getBibliothecaire() {
+        return bibliothecaire;
+    }
+
+    public void setBibliothecaire(Bibliothecaire bibliothecaire) {
+        this.bibliothecaire = bibliothecaire;
+    }
+
 }

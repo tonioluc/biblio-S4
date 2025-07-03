@@ -1,0 +1,20 @@
+voici les fonctionnalite dont je veux que tu ajoute dans ce projet :
+
+
+concernant les fonctionnalite des adherent :
+-les adherent peuvent reserver et prolonger des livres mais avec de limite de jours c'est a dire que il y a des quota pours les réservations et prolongement et c'est le bibliotecaire qui valide les réservations et prolongement des adhérents
+
+
+concernant les fonctionnalite des bibliotecaire :
+-les bibliotecaire fait les abonnement et reabonnement des adhérents et pour simplifier ca c'est de mettre une date de debut de l'abonnement et date d'expiration de l'abonnement dans le formulaire d'abonnement et de reabonnement d'un adhérents et donc il n'y en a plus les regles de payement car c'est juste que le bibliotecaire met une date debut et expiration de l'abonnement dans le formulaire
+
+-le bibliotecaire fait toujours des validations a toutes les demandes des adhérents comme si les adherent veulent reserver et prolonger ou bien faire des prêts c'est les bibliotecaire qui fait les validations de tout ca 
+
+
+concernant les fonctionnalite des prêts :
+-quand un adherent fait un prêt, elle a un nombre de quota(c'est a dire le nombre de livre) de prêt par rapport au profil de l'adherent et il y a 2 type de prêt :lecture sur place et a emporter 
+
+
+concernant la fonctionnalite de penalite :
+-quand un adherent a depasser le nombre de jours lors d'un prêt de livre elle est penaliser de 10jours 
+par exemple l'adherent doit etre son livre le 01 Mai et elle l'a rendu le 02 Mai elle sera penaliser a ne plus faire de prêt de livre a emporter pendant 10 jours et donc c'est le 12 Mai que elle pourrait faire de prêt de livre 
