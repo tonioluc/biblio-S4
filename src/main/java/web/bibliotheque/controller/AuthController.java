@@ -49,4 +49,9 @@ public class AuthController {
     public String accueil() {
         return "accueil";
     }
+
+    @GetMapping("/deconnexion")
+    public String logout(HttpSession session) {
+        return "login";
+    }
 }
