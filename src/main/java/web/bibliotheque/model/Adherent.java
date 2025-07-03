@@ -11,9 +11,6 @@ public class Adherent {
     private String nom;
     private String prenom;
 
-    @Column(unique = true, nullable = false)
-    private String email;
-
     private String adresse;
 
     private String statutCompte = "actif";
@@ -41,15 +38,6 @@ public class Adherent {
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getAdresse() {
         return adresse;
     }

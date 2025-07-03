@@ -9,9 +9,9 @@
     <h2>Page de connexion</h2>
     <form method="post" action="/login">
         <label>Email :</label>
-        <input type="text" value="rakoto.jean@mail.com" name="email" required /><br/>
+        <input type="text" value="john.doe@mail.com" name="email" required /><br/>
         <label>Mot de passe :</label>
-        <input type="password" value="mdp123" name="motDePasse" required /><br/>
+        <input type="password" value="motdepasse123" name="motDePasse" required /><br/>
         <button type="submit">Se connecter</button>
     </form>
     <c:if test="${not empty erreur}">

@@ -11,9 +11,6 @@ public class Bibliothecaire {
     private String nom;
     private String prenom;
 
-    @Column(unique = true, nullable = false)
-    private String email;
-
     public Integer getIdBibliothecaire() {
         return idBibliothecaire;
     }
@@ -37,13 +34,4 @@ public class Bibliothecaire {
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
 }

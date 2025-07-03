@@ -11,11 +11,14 @@ public class Exemplaire {
 
     private String titre;
     private String auteur;
-    private String etat;
 
     @ManyToOne
-    @JoinColumn(name = "id_statut") // FK vers la table StatutExemplaire
+    @JoinColumn(name = "id_statut") // FK vers StatutExemplaire
     private StatutExemplaire statut;
+
+    @ManyToOne
+    @JoinColumn(name = "id_etat") // FK vers EtatExemplaire
+    private EtatExemplaire etat;
 
     // Getters & Setters
     public Integer getId() { return id; }
@@ -27,9 +30,9 @@ public class Exemplaire {
     public String getAuteur() { return auteur; }
     public void setAuteur(String auteur) { this.auteur = auteur; }
 
-    public String getEtat() { return etat; }
-    public void setEtat(String etat) { this.etat = etat; }
-
     public StatutExemplaire getStatut() { return statut; }
     public void setStatut(StatutExemplaire statut) { this.statut = statut; }
+
+    public EtatExemplaire getEtat() { return etat; }
+    public void setEtat(EtatExemplaire etat) { this.etat = etat; }
 }
