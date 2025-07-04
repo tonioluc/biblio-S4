@@ -30,7 +30,7 @@
                         <c:if test="${sessionScope.role == 'adherent'}">
                             <td>
                                     <a href=""><button type="submit">Reserver</button></a>
-                                    <a href="/preter-livre/${ex.id}">
+                                    <a href="/adherent/emprunter-livre/${ex.id}">
                                         <button type="submit" <c:if test="${ex.statut == 'emprunté'}">disabled</c:if>>Prêter</button>
                                     </a>
                         </td>
