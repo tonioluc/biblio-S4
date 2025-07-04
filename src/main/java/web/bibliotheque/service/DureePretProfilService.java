@@ -21,4 +21,8 @@ public class DureePretProfilService {
             return 10;
         }
     }
+
+    public DureePretProfil findByProfil(Profil profil) {
+        return dureePretProfilRepository.findByProfil(profil);
+    }
 }

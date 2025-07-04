@@ -7,6 +7,9 @@
     </head>
     <body>
         <h2>Formulaire d'emprunt</h2>
+        <p><strong>Titre livre : </strong>${exemplaire.getTitre()}</p>
+        <p><strong>Auteur : </strong>${exemplaire.getAuteur()}</p>
+        <p><strong>Reste de quota actuel : </strong>${quotaDisponible}</p>
         <form action="${pageContext.request.contextPath}/adherent/emprunter-livre/${idExemplaire}" method="post">
             <div>
                 <label for="dateDebut">Date de début du prêt :</label>
@@ -22,5 +25,7 @@
             </div>
             <button type="submit">Emprunter</button>
         </form>
+        <a href="/accueil">Accueil</a><br>
+        <a href="/exemplaire/list">Liste des exemplaires</a>
     </body>
 </html>

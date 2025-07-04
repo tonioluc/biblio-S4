@@ -98,7 +98,6 @@ CREATE TABLE Pret (
     id SERIAL PRIMARY KEY,
     id_exemplaire INT NOT NULL,
     id_adherent INT NOT NULL,
-    date_demande DATE NOT NULL DEFAULT CURRENT_DATE,
     date_debut DATE,
     date_retour_prevue DATE,
     date_retour_effective DATE,

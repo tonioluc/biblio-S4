@@ -25,6 +25,18 @@ public class Utilisateur {
     @JoinColumn(name = "idBibliothecaire", referencedColumnName = "idBibliothecaire")
     private Bibliothecaire bibliothecaire;
 
+    @OneToOne
+    @JoinColumn(name = "idProfil" , referencedColumnName = "id")
+    private Profil profil;
+
+    public Profil getProfil() {
+        return profil;
+    }
+
+    public void setProfil(Profil profil) {
+        this.profil = profil;
+    }
+
     public Integer getId() {
         return idUtilisateur;
     }
